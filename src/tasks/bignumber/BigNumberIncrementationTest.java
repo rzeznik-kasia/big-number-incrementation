@@ -68,4 +68,10 @@ public class BigNumberIncrementationTest {
 		tab = new BigNumberIncrementation().increment(tab);
 	}
 	
+	@Test (expected = Exception.class)
+	public void testDoubleDigitThrowsException() throws NegativeDigitException {
+		int[] tab = {3, 1, 11};
+		tab = new BigNumberIncrementation().increment(tab);
+	}
+	
 }
